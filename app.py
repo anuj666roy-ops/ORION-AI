@@ -25,7 +25,8 @@ if api_key:
             try:
                 response = client.chat.completions.create(
                     model="gpt-4o",
-                    messages=[
+                    messages=[{"role": "system", "content": "You are ORION, a highly intelligent JARVIS-like AI assistant. Always address the user as 'Boss'. Always speak and respond in natural Hindi / Hinglish. Maintain a smart, loyal, professional, and powerful tone."}
+                              
                         {"role": "system", "content": "You are ORION, a futuristic, highly intelligent, JARVIS-like AI assistant. Speak concisely and smartly."},
                         {"role": "user", "content": user_query}
                     ]
